@@ -206,7 +206,7 @@ class Info {
         if($this->user_cash>=$pay_amount)
         {
 			$this->user_cash -= $pay_amount;
-            echo "<div id='success_message'>Order complete!(".($this->user_cash+$pay_amount)."-".$pay_amount.")</div>";
+            echo "<div id='success_message'>Order complete!!(".($this->user_cash+$pay_amount)."-".$pay_amount.")</div>";
             $this->dbc->Query("UPDATE minishop_tusers SET cCash='".$this->user_cash."' WHERE cID='".$this->user_id."'");
             $this->dbc->Query("DELETE FROM minishop_tcart_goods WHERE cCartID=".$this->cart_id);
         }
